@@ -1,3 +1,12 @@
+---
+name: User Story
+about: ユーザーストーリー
+title: ''
+labels: ''
+assignees: ''
+
+---
+
 ### As Is
 
 （今の状態を記載）
