@@ -1,0 +1,13 @@
+name: envs
+
+on:
+  workflow_dispatch:
+
+jobs:
+  envs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: envs
+        run: |
+          echo "github.repository_owner: ${{ github.repository_owner }}"
+          echo "secrets.GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
