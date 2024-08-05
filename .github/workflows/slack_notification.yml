@@ -7,13 +7,15 @@ jobs:
   dump:
     runs-on: ubuntu-latest
     steps:
-      - name: dump context
-        run: echo '${{ toJSON(github) }}'
+      - name: Run Python Script
+        run: |
+          output=$(python apps/print_out.py)
+          echo "SCRIPT_OUTPUT=$output" >> $GITHUB_OUTPUT
       - name: Post to a Slack channel
         id: slack
         uses: slackapi/slack-github-action@v1.26.0
         with:
           channel-id: "${{ vars.SLACK_CHANNEL_ID }}"
-          slack-message: "GitHub build result: ${{ job.status }}"
+          slack-message: "GitHub build result: $SCRIPT_OUTPUT"
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
