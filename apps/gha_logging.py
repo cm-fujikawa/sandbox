@@ -1,7 +1,10 @@
 import logging
+import os
+
+RUNNER_DEBUG = int(os.environ.get("RUNNER_DEBUG", "0"))
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG if RUNNER_DEBUG == 1 else logging.INFO)
 
 
 def sub():
