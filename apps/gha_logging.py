@@ -2,8 +2,8 @@ import logging
 import os
 
 RUNNER_DEBUG = int(os.environ.get("RUNNER_DEBUG", "0"))
-ACTIONS_RUNNER_DEBUG = os.environ.get("ACTIONS_RUNNER_DEBUG")
-ACTIONS_STEP_DEBUG = os.environ.get("ACTIONS_STEP_DEBUG")
+ACTIONS_RUNNER_DEBUG = True if "true" == os.environ.get("ACTIONS_RUNNER_DEBUG").lower() else False
+ACTIONS_STEP_DEBUG = True if "true" == os.environ.get("ACTIONS_STEP_DEBUG").lower() else False
 
 
 logger = logging.getLogger(__name__)
