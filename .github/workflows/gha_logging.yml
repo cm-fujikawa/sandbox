@@ -3,6 +3,10 @@ name: GitHub Actions logging sample
 on:
   workflow_dispatch:
 
+env:
+  ACTIONS_RUNNER_DEBUG: true
+  ACTIONS_STEP_DEBUG: true
+
 jobs:
   gha-logging:
     runs-on: ubuntu-latest
