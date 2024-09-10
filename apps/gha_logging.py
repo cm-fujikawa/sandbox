@@ -10,8 +10,8 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG if RUNNER_DEBUG == 1 else logging.INFO)
 
 
-logger.info(f"ACTIONS_RUNNER_DEBUG: {ACTIONS_RUNNER_DEBUG}")
-logger.info(f"ACTIONS_STEP_DEBUG: {ACTIONS_STEP_DEBUG}")
+logger.info(f"ACTIONS_RUNNER_DEBUG: {ACTIONS_RUNNER_DEBUG}, type: {type(ACTIONS_RUNNER_DEBUG)}")
+logger.info(f"ACTIONS_STEP_DEBUG: {ACTIONS_STEP_DEBUG}, type: {type(ACTIONS_STEP_DEBUG)}")
 
 
 def sub():
