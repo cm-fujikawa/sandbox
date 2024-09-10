@@ -19,4 +19,4 @@ jobs:
       - name: Main
         continue-on-error: false
         run: |
-          python gha_logging.py
+          python apps/gha_logging.py
