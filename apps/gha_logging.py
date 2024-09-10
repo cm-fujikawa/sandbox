@@ -7,7 +7,7 @@ ACTIONS_STEP_DEBUG = True if "true" == os.environ.get("ACTIONS_STEP_DEBUG").lowe
 
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.DEBUG if RUNNER_DEBUG == 1 else logging.INFO)
+logging.basicConfig(level=logging.DEBUG if RUNNER_DEBUG == 1 or ACTIONS_RUNNER_DEBUG else logging.INFO)
 
 
 logger.info(f"ACTIONS_RUNNER_DEBUG: {ACTIONS_RUNNER_DEBUG}, type: {type(ACTIONS_RUNNER_DEBUG)}")
