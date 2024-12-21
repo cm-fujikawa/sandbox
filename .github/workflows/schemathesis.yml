@@ -1,7 +1,6 @@
 name: Schemathesis Test
 
-on:
-  workflow_dispatch:
+on: [pull_request]
 
 jobs:
   api-tests:
